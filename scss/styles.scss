@@ -1,0 +1,52 @@
+@use 'colors';
+@use 'fontSizes';
+
+@mixin boxProperties($borderRadius, $textColor) {
+    border-radius: $borderRadius;
+    color: $textColor;
+    font-size: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.box1 {
+    @include boxProperties(10px, red);
+    padding: 0;
+    background-color: colors.$boxBackgroundColor;
+
+    &:hover {
+        background-color: red;
+    }
+}
+
+.box2 {
+    @include boxProperties(10px, green);
+    background-color: colors.$boxBackgroundColor;
+
+}
+
+.rory {
+    border-radius: 10000px;
+}
+
+.specialButton {
+    background-color: colors.$secondaryButtonColor;
+    height: 40px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+nav {
+    ul {
+        border-radius: 1px;
+        font-size: fontSizes.$bigFontSize;
+    }
+
+    span {
+        color: red;
+    }
+
+    div {
+        background-color: red;
+    }   
+}
